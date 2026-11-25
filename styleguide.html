@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Style guide | Software Engineering, FCI Suez Canal University</title>
+<meta name="description" content="Palette, type scale, spacing and measured contrast.">
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<div class="page wrapper">
+<header class="site-header">
+  <a class="brand" href="index.html">
+    <span class="brand__mark" aria-hidden="true">SE</span>
+    <span class="brand__text">
+      <span class="brand__name">Software Engineering Department</span>
+      <span class="brand__sub">Faculty of Computers and Informatics, Suez Canal University</span>
+    </span>
+  </a>
+  <nav aria-label="Main"><ul class="nav"><li><a href="index.html">Home</a></li><li><a href="programs.html">Programs</a></li><li><a href="contact.html">Contact</a></li><li><a href="styleguide.html" aria-current="page">Style guide</a></li></ul></nav>
+</header>
+<main id="main">
+<section class="hero" aria-labelledby="h1">
+  <h1 id="h1">Style guide</h1>
+  <p class="lead">One visual identity, defined once as custom properties on <code>:root</code> in <code>css/site.css</code> and used by every page.</p>
+</section>
+<section class="section" aria-labelledby="pal"><h2 id="pal">Palette</h2><ul class="swatches"><li class="swatch"><div class="swatch__chip sw-ink"></div><div class="swatch__label"><strong>--c-ink</strong><code>#0F1F3A</code>Body text</div></li><li class="swatch"><div class="swatch__chip sw-paper"></div><div class="swatch__label"><strong>--c-paper</strong><code>#FFFFFF</code>Page background</div></li><li class="swatch"><div class="swatch__chip sw-surface"></div><div class="swatch__label"><strong>--c-surface</strong><code>#EEF3F9</code>Cards and hero</div></li><li class="swatch"><div class="swatch__chip sw-brand"></div><div class="swatch__label"><strong>--c-brand</strong><code>#0B4F8A</code>Brand: header, links, buttons</div></li><li class="swatch"><div class="swatch__chip sw-brand-dark"></div><div class="swatch__label"><strong>--c-brand-dark</strong><code>#083B68</code>Hover state</div></li><li class="swatch"><div class="swatch__chip sw-muted"></div><div class="swatch__label"><strong>--c-muted</strong><code>#3D4B63</code>Secondary text</div></li><li class="swatch"><div class="swatch__chip sw-accent"></div><div class="swatch__label"><strong>--c-accent</strong><code>#8A4B00</code>Tag text</div></li><li class="swatch"><div class="swatch__chip sw-accent-soft"></div><div class="swatch__label"><strong>--c-accent-soft</strong><code>#FDE9C4</code>Tag background</div></li><li class="swatch"><div class="swatch__chip sw-line"></div><div class="swatch__label"><strong>--c-line</strong><code>#7A8BA4</code>Input borders</div></li><li class="swatch"><div class="swatch__chip sw-halo"></div><div class="swatch__label"><strong>--c-halo</strong><code>#FFBF47</code>Focus ring, outer</div></li></ul></section>
+<section class="section" aria-labelledby="ty"><h2 id="ty">Type scale</h2>
+  <p>Base size 1rem (16px), ratio 1.25 (major third). Each step is the previous step multiplied by the ratio. Headings use <code>clamp()</code> between two steps.</p>
+  <div class="scale"><div class="scale__row"><span class="scale__meta">--step--1 = 0.8rem = 12.8px</span><span class="s--1">Software engineering</span></div><div class="scale__row"><span class="scale__meta">--step-0 = 1rem = 16.0px</span><span class="s-0">Software engineering</span></div><div class="scale__row"><span class="scale__meta">--step-1 = 1.25rem = 20.0px</span><span class="s-1">Software engineering</span></div><div class="scale__row"><span class="scale__meta">--step-2 = 1.5625rem = 25.0px</span><span class="s-2">Software engineering</span></div><div class="scale__row"><span class="scale__meta">--step-3 = 1.953rem = 31.2px</span><span class="s-3">Software engineering</span></div><div class="scale__row"><span class="scale__meta">--step-4 = 2.441rem = 39.1px</span><span class="s-4">Software engineering</span></div><div class="scale__row"><span class="scale__meta">--step-5 = 3.052rem = 48.8px</span><span class="s-5">Software engineering</span></div></div></section>
+<section class="section" aria-labelledby="spc"><h2 id="spc">Spacing</h2><div class="bars"><div class="bar"><span class="bar__box b1"></span>--space-1 = 0.25rem = 4px</div><div class="bar"><span class="bar__box b2"></span>--space-2 = 0.5rem = 8px</div><div class="bar"><span class="bar__box b3"></span>--space-3 = 0.75rem = 12px</div><div class="bar"><span class="bar__box b4"></span>--space-4 = 1rem = 16px</div><div class="bar"><span class="bar__box b5"></span>--space-5 = 1.5rem = 24px</div><div class="bar"><span class="bar__box b6"></span>--space-6 = 2rem = 32px</div><div class="bar"><span class="bar__box b7"></span>--space-7 = 3rem = 48px</div><div class="bar"><span class="bar__box b8"></span>--space-8 = 4rem = 64px</div></div></section>
+<section class="section" aria-labelledby="ctr"><h2 id="ctr">Measured contrast</h2>
+  <p>Ratios are computed from the hex values with the WCAG relative luminance formula. Text needs 4.5:1, non-text indicators need 3:1.</p>
+  <div class="table-wrap" role="region" aria-label="Contrast table" tabindex="0"><table class="pairs"><thead><tr><th scope="col">Pair</th><th scope="col">Sample</th><th scope="col">Colours</th><th scope="col">Ratio</th><th scope="col">Result</th></tr></thead><tbody><tr><td>Body text on page</td><td><span class="sample pair-1">Aa text</span></td><td><code>#0F1F3A</code> on <code>#FFFFFF</code></td><td><strong>16.44:1</strong></td><td>AA body 4.5:1: Pass</td></tr><tr><td>Body text on surface</td><td><span class="sample pair-2">Aa text</span></td><td><code>#0F1F3A</code> on <code>#EEF3F9</code></td><td><strong>14.74:1</strong></td><td>AA body 4.5:1: Pass</td></tr><tr><td>Muted text on page</td><td><span class="sample pair-3">Aa text</span></td><td><code>#3D4B63</code> on <code>#FFFFFF</code></td><td><strong>8.80:1</strong></td><td>AA body 4.5:1: Pass</td></tr><tr><td>Muted text on surface</td><td><span class="sample pair-4">Aa text</span></td><td><code>#3D4B63</code> on <code>#EEF3F9</code></td><td><strong>7.89:1</strong></td><td>AA body 4.5:1: Pass</td></tr><tr><td>Link on page</td><td><span class="sample pair-5">Aa text</span></td><td><code>#0B4F8A</code> on <code>#FFFFFF</code></td><td><strong>8.40:1</strong></td><td>AA body 4.5:1: Pass</td></tr><tr><td>Link on surface</td><td><span class="sample pair-6">Aa text</span></td><td><code>#0B4F8A</code> on <code>#EEF3F9</code></td><td><strong>7.53:1</strong></td><td>AA body 4.5:1: Pass</td></tr><tr><td>Header text on brand</td><td><span class="sample pair-7">Aa text</span></td><td><code>#FFFFFF</code> on <code>#0B4F8A</code></td><td><strong>8.40:1</strong></td><td>AA body 4.5:1: Pass</td></tr><tr><td>Nav hover on brand-dark</td><td><span class="sample pair-8">Aa text</span></td><td><code>#FFFFFF</code> on <code>#083B68</code></td><td><strong>11.44:1</strong></td><td>AA body 4.5:1: Pass</td></tr><tr><td>Tag text on tag background</td><td><span class="sample pair-9">Aa text</span></td><td><code>#8A4B00</code> on <code>#FDE9C4</code></td><td><strong>5.71:1</strong></td><td>AA body 4.5:1: Pass</td></tr><tr><td>Note text on tag background</td><td><span class="sample pair-10">Aa text</span></td><td><code>#0F1F3A</code> on <code>#FDE9C4</code></td><td><strong>13.80:1</strong></td><td>AA body 4.5:1: Pass</td></tr><tr><td>Hover link on page</td><td><span class="sample pair-11">Aa text</span></td><td><code>#083B68</code> on <code>#FFFFFF</code></td><td><strong>11.44:1</strong></td><td>AA body 4.5:1: Pass</td></tr><tr><td>Input border on page</td><td>(non-text)</td><td><code>#7A8BA4</code> on <code>#FFFFFF</code></td><td><strong>3.47:1</strong></td><td>AA non-text 3:1: Pass</td></tr><tr><td>Focus ring (ink) on page</td><td>(non-text)</td><td><code>#0F1F3A</code> on <code>#FFFFFF</code></td><td><strong>16.44:1</strong></td><td>AA non-text 3:1: Pass</td></tr><tr><td>Focus ring (ink) on brand header</td><td>(non-text)</td><td><code>#0F1F3A</code> on <code>#0B4F8A</code></td><td><strong>1.96:1</strong></td><td>AA non-text 3:1: Not relied on: the halo ring carries the indicator here</td></tr><tr><td>Focus ring (halo) on brand header</td><td>(non-text)</td><td><code>#FFBF47</code> on <code>#0B4F8A</code></td><td><strong>5.12:1</strong></td><td>AA non-text 3:1: Pass</td></tr></tbody></table></div></section>
+</main>
+<aside class="aside" aria-labelledby="aside-title">
+  <h2 id="aside-title">Breakpoints</h2>
+  <dl class="facts">
+    <dt>Phone first</dt><dd>one column, no query</dd>
+    <dt>40rem (640px)</dt><dd>form fields share a row</dd>
+    <dt>64rem (1024px)</dt><dd>aside moves beside main</dd>
+  </dl>
+</aside>
+<footer class="site-footer">
+  <p>Software Engineering Department, Faculty of Computers and Informatics, Suez Canal University, Ismailia, Egypt. A student coursework microsite; not an official university website.</p>
+</footer>
+</div>
+</body>
+</html>

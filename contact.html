@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact | Software Engineering, FCI Suez Canal University</title>
+<meta name="description" content="Contact the Software Engineering Department.">
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<div class="page wrapper">
+<header class="site-header">
+  <a class="brand" href="index.html">
+    <span class="brand__mark" aria-hidden="true">SE</span>
+    <span class="brand__text">
+      <span class="brand__name">Software Engineering Department</span>
+      <span class="brand__sub">Faculty of Computers and Informatics, Suez Canal University</span>
+    </span>
+  </a>
+  <nav aria-label="Main"><ul class="nav"><li><a href="index.html">Home</a></li><li><a href="programs.html">Programs</a></li><li><a href="contact.html" aria-current="page">Contact</a></li><li><a href="styleguide.html">Style guide</a></li></ul></nav>
+</header>
+<main id="main">
+<section class="hero" aria-labelledby="h1">
+  <h1 id="h1">Contact the department</h1>
+  <p class="lead">Questions about programs, projects or visiting the labs? Send a note, or find the campus on the map.</p>
+</section>
+<p class="note"><strong>Demo form.</strong> This coursework site is static, so the form does not send a message. Real contact details must come from the faculty office.</p>
+<section class="section" aria-labelledby="form-title">
+  <h2 id="form-title">Send a message</h2>
+  <form class="form" method="get" action="contact.html">
+    <div class="form-row">
+      <div class="field field--half"><label for="name">Full name</label><input id="name" name="name" type="text" autocomplete="name" required></div>
+      <div class="field field--half"><label for="email">Email address</label><input id="email" name="email" type="email" autocomplete="email" required></div>
+    </div>
+    <div class="field">
+      <label for="topic">Topic</label>
+      <select id="topic" name="topic">
+        <option>Programs</option>
+        <option>Student projects</option>
+        <option>Visiting the labs</option>
+        <option>Something else</option>
+      </select>
+    </div>
+    <div class="field">
+      <label for="msg">Message</label>
+      <textarea id="msg" name="msg" required aria-describedby="msg-hint"></textarea>
+      <span class="hint" id="msg-hint">A few sentences is enough.</span>
+    </div>
+    <div class="actions"><button class="btn" type="submit">Send message</button></div>
+  </form>
+</section>
+<section class="section" aria-labelledby="map-title">
+  <h2 id="map-title">Find us</h2>
+  <div class="map-card">
+    <p>The Faculty of Computers and Informatics is part of Suez Canal University in Ismailia. The map link opens the main university campus; the faculty building is on this campus, but the pin marks the campus, not the building.</p>
+    <a class="btn btn--ghost" href="https://www.openstreetmap.org/?mlat=30.62214&amp;mlon=32.27505#map=16/30.62214/32.27505">Open the campus map (OpenStreetMap)</a>
+  </div>
+</section>
+</main>
+<aside class="aside" aria-labelledby="aside-title">
+  <h2 id="aside-title">Where</h2>
+  <dl class="facts">
+    <dt>Faculty</dt><dd>Computers and Informatics</dd>
+    <dt>University</dt><dd>Suez Canal University</dd>
+    <dt>City</dt><dd>Ismailia, Egypt</dd>
+  </dl>
+</aside>
+<footer class="site-footer">
+  <p>Software Engineering Department, Faculty of Computers and Informatics, Suez Canal University, Ismailia, Egypt. A student coursework microsite; not an official university website.</p>
+</footer>
+</div>
+</body>
+</html>
